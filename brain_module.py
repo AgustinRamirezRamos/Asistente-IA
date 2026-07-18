@@ -1,7 +1,11 @@
 import google.generativeai as glai
 import muscle_module
+import os
+from dotenv import load_dotenv
 
-API_KEY = "AIzaSyA9Q-j75QRH9_wD8TxEB4pC-uwfnlczMY0"
+load_dotenv()
+
+API_KEY = os.getenv("GEMINI_API_KEY")
 glai.configure(api_key=API_KEY)
 
 #Puse Flash porque por ahora solo va a ser un agente de voz, mas adelante vere
